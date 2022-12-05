@@ -11,7 +11,7 @@ from teacher import models as TMODEL
 
 
 #for showing signup/login button for student
-def studentclick_view(request):
+def studentclick_view(request): 
     if request.user.is_authenticated:
         return HttpResponseRedirect('afterlogin')
     return render(request,'student/studentclick.html')
